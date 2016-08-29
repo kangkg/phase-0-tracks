@@ -1,4 +1,5 @@
 # Git Definitions
+# Release 2 random change!
 
 **Instructions: ** Define each of the following Git concepts.
 
