@@ -1,5 +1,5 @@
 # Explanation of the Input Elements.
-The "<" are removed.
+
 
 * `<input type="text" name="fullname">` : Simply accepts any text. 
 * `<input type="password" name="password">` : Accepts any characters, hides them with asterisks.
