@@ -1,20 +1,24 @@
-#glasses{
-  position: absolute;
-  margin-left: 242px;
-  margin-top: 188px;
-  z-index: 2;
+#glasses {
+  position:fixed;
+    margin-top: 10%;
+    margin-left: 50%;
+    z-index:2;
+        display: block;
+
 }
 
 #octo
 {
-  position: absolute;
-  margin-left: 200px;
-  margin-top: 90px;
+    position:absolute;
+    margin-left: 50%;
+        margin-right: 50%;
+
+    margin-top: 6%;
 }
 
 #hat
 {
-  position: absolute;
-  margin-left: 190px;
+  position: fixed;
+  margin-left: 50%;
   z-index: 1;
 }
