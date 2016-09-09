@@ -1,3 +1,31 @@
+/* This way is to ensure resizing the screen keeps the image centered. Probably not intended from DBC. */
+
+#glasses{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* all this does is apply the position values to the center of the image rather than the left border of the image*/
+    top: 198px;
+}
+
+
+#octo
+{
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#hat
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35px;
+}
+
+/* I'm pretty sure this is the proper way that DBC intended:
+
+
 #glasses{
   position: absolute;
   margin-left: 242px;
@@ -18,3 +46,8 @@
   margin-left: 190px;
   z-index: 1;
 }
+
+
+
+
+*/
