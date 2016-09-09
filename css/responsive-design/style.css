@@ -9,10 +9,10 @@ body
 
 main
 {
-  margin-left: 27%;
-  margin-right: 1%;
-  max-width:75%;
-  position: relative;
+  vertical-align: top;
+  display: inline-block;
+  width: 75%;
+  float: right;
 }
 
 
@@ -27,24 +27,24 @@ cite {
   margin-top: 10px;
 }
 
+#external-links 
+{
+  vertical-align: top;
+  display: inline-block;
+  max-width:25%;
+  position:fixed;
+  height:100%;
+  margin: 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
 
-
 }
 
-#external-links 
-{
-  width: 25%;
-  max-width: 240px;
-  position:fixed;
-  overflow:auto;
-  margin: 0;
-  padding: 10px;
-  height:100%;
-  background-color: #f1f1f1;
-}
 
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like, 
