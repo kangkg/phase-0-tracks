@@ -1,0 +1,20 @@
+#glasses{
+  position: absolute;
+  margin-left: 242px;
+  margin-top: 188px;
+  z-index: 2;
+}
+
+#octo
+{
+  position: absolute;
+  margin-left: 200px;
+  margin-top: 90px;
+}
+
+#hat
+{
+  position: absolute;
+  margin-left: 190px;
+  z-index: 1;
+}
