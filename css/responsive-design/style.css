@@ -74,7 +74,7 @@ figcaption {
 */
 
 
-@media screen and (max-width: 550px) and (min-width: 390.001px) {
+@media screen and (max-width: 550px) and (min-width: 391px) {
     main {
     width: 88% ;
   }
