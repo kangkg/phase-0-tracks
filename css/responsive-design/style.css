@@ -12,22 +12,12 @@ main
 {
   vertical-align: top;
   display: inline-block;
-  width: 75%;
+  width: 73%;
   float: right; /* I have to float because im using a fixed position for the links (i think.) */
 
 }
 
 
-blockquote {
-  border-left: 5px solid blue;
-  padding: 15px;
-  margin-left: 0px;
-}
-
-cite {
-  display: block;
-  margin-top: 10px;
-}
 
 #external-links 
 {
@@ -44,13 +34,23 @@ cite {
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
-
 }
 
 
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like, 
 but it's optional! */
+blockquote {
+  border-left: 5px solid blue;
+  padding: 15px;
+  margin-left: 0px;
+}
+
+cite {
+  display: block;
+  margin-top: 10px;
+}
+
 img {
   width: 100%;
 }
@@ -66,27 +66,74 @@ figcaption {
 }
 
 
-@media screen and (max-width: 500px) {
+/*@media screen and (max-width: 500px) {
   body {
-    background-color: blue;
+    background-color: ;
   }
 }
+*/
 
 
+@media screen and (max-width: 550px) and (min-width: 390.001px) {
+    main {
+    width: 88% ;
+  }
 
-@media screen and (max-width: 550px) {
+
   #external-links {
-    background-color: hotpink;
-      vertical-align: top;
+  background-color: lightgreen;
+  vertical-align: top;
   display: inline-block;
-  max-width:24%;
+  width:10%;
+  font-size: .5em;
   position:fixed;
   height:100%;
   margin: 0;
-  padding: 10px;
-  background-color: #f1f1f1;
+  padding: 0px;
+
+  }
+
+  #external-links ul {
+    list-style-type: disc;
+  }
+
+  #external-links h1 {
+    font-size: 1em;
   }
 }
+
+@media screen and (max-width: 390px) and (min-width: 0px) {
+    main {
+    width: 100% ;
+    margin-top: 0%;
+    float: bottom;
+  }
+
+
+  #external-links {
+  background-color: #FFDAB9;
+  vertical-align: top;
+  display: block;
+  min-width: 100%;
+  font-size: 0.8em;
+  position:relative;
+  max-height:25%;
+  margin: 0;
+  padding: 0px;
+  float: top;
+  }
+
+  #external-links ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+
+  #external-links h1 {
+    font-size: 1em;
+    margin-left: 5px;
+  }
+}
+
 
 
 /*notes for myself: make the sidebar disappear at smaller sizes. make it a footer maybe. perhaps images as well. fix up fonts too.*/
