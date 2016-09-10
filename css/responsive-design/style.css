@@ -5,6 +5,7 @@
 body
 {
   max-width: 960px;
+
 }
 
 main
@@ -32,7 +33,7 @@ cite {
 {
   vertical-align: top;
   display: inline-block;
-  max-width:25%;
+  max-width:24%;
   position:fixed;
   height:100%;
   margin: 0;
@@ -67,7 +68,25 @@ figcaption {
 
 @media screen and (max-width: 500px) {
   body {
-    background-color: hotpink;
+    background-color: blue;
   }
 }
 
+
+
+@media screen and (max-width: 550px) {
+  #external-links {
+    background-color: hotpink;
+      vertical-align: top;
+  display: inline-block;
+  max-width:24%;
+  position:fixed;
+  height:100%;
+  margin: 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  }
+}
+
+
+/*notes for myself: make the sidebar disappear at smaller sizes. make it a footer maybe. perhaps images as well. fix up fonts too.*/
