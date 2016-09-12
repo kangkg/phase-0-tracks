@@ -26,8 +26,8 @@ end
 
 puts "Please give me 3 eggs."
 *waits until you place 3 eggs*
-*Use some method that properly makes omelets*
-
+*Use some method that properly makes omelets (crack open eggs -> beat eggs-> place in hot-pan for 5 minutes)*
+  *code uses like: (until loops etc)
 *Place omelet on plate and serve.*
 
 // yay //
