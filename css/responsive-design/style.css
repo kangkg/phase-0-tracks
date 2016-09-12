@@ -4,15 +4,15 @@
 
 body
 {
-  max-width: 960px;
+  max-width: 960px; /* this needs to be a max width to make sure huge viewports don't mess up the format horribly */
 
 }
 
 main
 {
-  vertical-align: top;
-  display: inline-block;
-  width: 73%;
+  vertical-align: top;  /*This line is to vertically align the element with the top of the page. it's almost always "top */
+  display: inline-block; /* honestly not certain why "inline-" is required, of even if it is*/
+  max-width: 73%; /*width is different than max-width and min-width. without max or min, width ALWAYS takes the same %. max-width makes sure that the element ONLY takes as much space as it needs, UP to the maximum length. */
   float: right; /* I have to float because im using a fixed position for the links (i think.) */
 
 }
@@ -24,8 +24,8 @@ main
   vertical-align: top;
   display: inline-block;
   max-width:24%;
-  position:fixed;
-  height:100%;
+  position:fixed; /*this is important since it fixes the code into our viewport. always there. */
+  height:100%; /*this is to ensure the sidebar goes vertically throughout the entire page*/
   margin: 0;
   padding: 10px;
   background-color: #f1f1f1;
@@ -76,7 +76,7 @@ figcaption {
 
 @media screen and (max-width: 550px) and (min-width: 391px) {
     main {
-    width: 88% ;
+    max-width: 88% ;
   }
 
 
@@ -84,7 +84,7 @@ figcaption {
   background-color: lightgreen;
   vertical-align: top;
   display: inline-block;
-  width:10%;
+  max-width:10%;
   font-size: .5em;
   position:fixed;
   height:100%;
@@ -94,7 +94,7 @@ figcaption {
   }
 
   #external-links ul {
-    list-style-type: disc;
+    list-style-type: none;
   }
 
   #external-links h1 {
@@ -116,11 +116,11 @@ figcaption {
   display: block;
   min-width: 100%;
   font-size: 0.8em;
-  position:relative;
+  position:relative; /*this is no longer fixed. it stays at the top of the page. */
   max-height:25%;
   margin: 0;
   padding: 0px;
-  float: top;
+  float: top; /* had to move sidebar to top, with this */
   }
 
   #external-links ul {
