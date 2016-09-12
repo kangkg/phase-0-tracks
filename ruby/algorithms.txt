@@ -1,0 +1,34 @@
+// start elevator code
+While (Elevator door != open)
+  wait 3 seconds.
+end
+
+// elevator door is now open to get here.
+
+*enter elevator*
+puts "Beep Boop. What floor would you like, human?"
+yourAnswer = gets.chomp
+while (yourAnswer.is_a_number != true)
+  puts "What floor would you like, human? Please answer in digits."
+  yourAnswer = gets.chomp
+end
+
+puts "Thank you, have a good day."
+*Robot pushes proper elevator button*
+// end elevator code
+
+// my everyday code to make an omelet //
+puts "Would you like an omelet today? "
+if (answer != "yes")
+  puts "Okay. Maybe another time."
+  abort // ends code.
+end
+
+puts "Please give me 3 eggs."
+*waits until you place 3 eggs*
+*Use some method that properly makes omelets*
+
+*Place omelet on plate and serve.*
+
+// yay //
+
