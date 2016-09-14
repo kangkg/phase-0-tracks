@@ -1,7 +1,7 @@
 # Ken's Vamps
 
 puts "What is your name?"
-name = gets.chomp.capitalize
+name = gets.chomp.downcase
 puts "How old are you?"
 age = gets.chomp.to_i
 puts "What year were you born?"
@@ -48,15 +48,16 @@ if (!age && !garlic && !insurance)
 end
   
   # Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. In that case, you should print “Definitely a vampire.”
-if (name == "Drake Cula" || "Tu Fang" || "Donald Trump")
+if (name == "drake cula" || name == "tu fang" || name == "donald trump")
   results = "Definitely a vampire."
 end
 
   #For outlying case
-if (results = nil)
+if (results == nil)
   puts "Results inconclusive."
 end
 
+  #If not outlier: RESULTS
 puts "My Results: #{results}"
 
 
