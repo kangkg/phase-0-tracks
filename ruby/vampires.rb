@@ -81,12 +81,8 @@ until (processed == 0)
   else
     #If not outlier: RESULTS
     puts "My Results: #{results}"
+    puts ""
   end
 end ########## <-- end loop  
   
-  
-  
-    
-  
-# Otherwise, print “Results inconclusive.”
-# Print the result at the end of the survey.
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
