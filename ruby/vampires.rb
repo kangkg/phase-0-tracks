@@ -1,10 +1,11 @@
 # Ken's Vamps
-######################## Loop
+########################   Loop of employees ##########################
 puts "How many Employees will be processed? (Please enter a digit.)"
 processed = gets.chomp.to_i
 
-until (processed == 0)
+until (processed == 0) 
   processed -= 1
+
 
   
   ########################### Questions
@@ -37,7 +38,7 @@ until (processed == 0)
   else
     insurance = false
   end
-  
+
   ################################### Check the results of answers together: #############################
   results = nil #for outliers-case
     # If the employee got their age right, and is willing to eat garlic bread or sign up for insurance, the result is “Probably not a vampire.”
@@ -59,7 +60,21 @@ until (processed == 0)
   if (name == "drake cula" || name == "tu fang" || name == "donald trump")
     results = "Definitely a vampire."
   end
-  
+
+  ########################   other loop to test allergies  ##################################################
+  puts "Before we start, do you have any allergies? Please list them one at a time. Say \"done\" when you are finished."
+  done = gets.chomp.downcase
+  if (done == "sunshine")
+    results = "Probably a vampire."
+  end
+
+  until (done == "done")
+    puts "Any other allergies? Say \"done\" when you are finished."
+    done = gets.chomp.downcase
+  end
+  ######################### end allergy loop ####################################################################
+
+
     #For outlying case
   if (results == nil)
     puts "Results inconclusive."
@@ -67,7 +82,7 @@ until (processed == 0)
     #If not outlier: RESULTS
     puts "My Results: #{results}"
   end
-end #end loop  
+end ########## <-- end loop  
   
   
   
