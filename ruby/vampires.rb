@@ -1,4 +1,4 @@
-# Ken's Vamps
+## Ken's Vamps
 ########################   Loop of employees ##########################
 puts "How many Employees will be processed? (Please enter a digit.)"
 processed = gets.chomp.to_i
