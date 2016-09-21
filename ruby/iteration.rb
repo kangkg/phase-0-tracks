@@ -15,7 +15,7 @@ def block_test2 #(x)
   yield("Ken", "Hyejin")
   puts "Status message 2"
 end
- 
+
 ######## driver code for video-1
 block_test { |name1, name2| #this method we made is taking a block as a parameter..
   puts "I'm a block!" 
@@ -31,8 +31,8 @@ letters2 = []
 puts """,Original Data: #{letters }"
 
 letters.each do |letter|
-    letters2 << letter.upcase
-    p letter
+  letters2 << letter.upcase
+  p letter
 end
 
 puts "Letters1: #{letters}"
@@ -73,7 +73,7 @@ p "numbers1: #{numbers}"
 numbers.each do |number1, number2| 
   number2 = number2.upcase
   p number2
-  end
+end
 
 puts "","numbers1 after block: #{numbers}",""
 
@@ -121,6 +121,9 @@ puts "Modified hash_keep: #{hash_keep}"
 
 ####A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
 ## Can use the previous section..?
+# find_index : a.index { |x| x == "b" }
+### URL http://ruby-doc.org/core-2.1.8/Array.html#method-i-find_index
+
 
 ####A method that will remove items from a data structure until the condition in the block evaluates to false, then stops (you may not find a perfectly working option for the hash, and that's okay).
 
