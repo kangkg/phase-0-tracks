@@ -32,6 +32,7 @@ def if_vowel_or_consonant (x)
           x = vowel[0]
           return x  # return edge statement value
         end # end edge statement
+        puts "","Modified Vowel:  " + x ## DEBUGGING
         return x # return x, if not edge statement
       end #end the letter == x checking
     end # end vowel.each block
@@ -39,23 +40,51 @@ def if_vowel_or_consonant (x)
    #
   else   ########## method for consonants # check edge case for z.
     if x == "z" then return x = "a" #edge case of "z"
-    else
+    else #skip over vowels completely!
+        puts "","Original Letter: " + x
       x = x.next
+        p "Modified letter:  " + x ## DEBUGGING
+      if vowel.include? x  # Check if it turned into a vowel again.
+        x = x.next 
+        puts  "If-vowel letter:   " + x ## DEBUGGING 
+      end
       return x
     end
   end # End entire if statement
 end
 
+
 def letter_by_letter(x)
-  puts "hai"
+  x[0] = x[0].chars
+  x[0].each_with_index do |value, index|
+    # puts "THIS IS INDEX: #{index} and THIS IS VALUE: #{value}" ##DEBUG
+    x[0][index] = if_vowel_or_consonant(value)
+    puts "THIS IS X[0]: #{x[0]}" # DEBUG
+  end #end map for first word
+
+  x[1] = x[1].chars
+  x[1].each_with_index do |value, index|
+    # puts "THIS IS INDEX: #{index} and THIS IS VALUE: #{value}" ##DEBUG
+    x[1][index] = if_vowel_or_consonant(value)
+    puts "THIS IS X[1]: #{x[1]}" # DEBUG
+  end #end map for first word
+
+
+
+  end #end map for second word
+  x[0] = x[0].join('')
+  x[1] = x[1].join('')
+  return x[0].capitalize + " " + x[1].capitalize
 end
 
 # ########################## DRIVER CODE #########################
 vowels = ["a","e","i","o","u"] # can change in future!
 
 puts "","What is your real name?"
-current_name = your_name_reversed(gets.chomp) # hold reversed name.
+current_name = your_name_reversed("Felicia Torres") # hold reversed name. will become "Vussit Gimodoe != "vutsis gomodie"
 
+
+puts "AFTER REVERSED:  #{current_name}",""
 ### Debugging
 ## current_name[0] = "code here"
 # p if_vowel_or_consonant ("e") # debug. return i.
@@ -64,9 +93,15 @@ current_name = your_name_reversed(gets.chomp) # hold reversed name.
 # p if_vowel_or_consonant ("z") # debug. return a. edge case.
 # p if_vowel_or_consonant ("y") # debug. return z.
 
-letter_by_letter(curret_name)
+current_name = letter_by_letter(current_name)
+p current_name + " SHOULD BE Vussit Gimodoe"
 
-
+# T => V
+# O => U
+# R => S
+# R => S
+# E => I
+# S => T
 
 
 
