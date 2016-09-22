@@ -30,6 +30,7 @@ def if_vowel_or_consonant (x)
         return x
       end #end this if-state
     end # end this block
+    x
   end #end entire vowel check
 
 
