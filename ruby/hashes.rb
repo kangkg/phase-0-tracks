@@ -36,7 +36,7 @@ def change_answer (info, x)
     return info
   else
     puts "What would you like to change that answer to?"
-    ans = gets.chomp
+    ans = gets.chomp # Oops i didnt even alter string to a proper answer! Oh well...
     info[x] = ans
     return info
   end
