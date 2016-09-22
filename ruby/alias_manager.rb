@@ -14,11 +14,11 @@ def your_name_reversed(x)
   x.downcase! # Ensure all down-case for easier future coding
   x = x.split(' ')
    # p x.reverse # debug
-  x.reverse # Returns the swapped last and first name
+  return x.reverse # Returns the swapped last and first name
 end
 
 def if_vowel_or_consonant (x)
-  vowel = ["a","e","i","o","u"] #can these "vowels" to something else if wanted.
+  vowel = ["a","e","i","o","u"] #can change these "vowels" to something else if wanted.
   if vowel.include? x # to check if vowel or consonant
     # ### EDGE CASES: ##### brute-force way, did a better way.
     # if x == "u" #edge case for "u" - I could probably do some other way checking index -1 but not sure..
@@ -36,25 +36,42 @@ def if_vowel_or_consonant (x)
       end #end the letter == x checking
     end # end vowel.each block
    ######## END VOWEL CHECK
-  else   ########## method for consonants
-    # etc
+   #
+  else   ########## method for consonants # check edge case for z.
+    if x == "z" then return x = "a" #edge case of "z"
+    else
+      x = x.next
+      return x
+    end
   end # End entire if statement
 end
 
+def letter_by_letter(x,y)
+  puts "hai"
+end
 
 # ########################## DRIVER CODE #########################
 vowels = ["a","e","i","o","u"] # can change in future!
 
 puts "","What is your real name?"
-current_name = your_name_reversed(gets.chomp)
+current_name = your_name_reversed(gets.chomp) # hold reversed name.
 
-#p current_name
-current_name[0] = "code here"
-p if_vowel_or_consonant ("e") # debug. return i.
-p if_vowel_or_consonant ("a") # debug. return e.
-p if_vowel_or_consonant ("u") # debug. return a. edge case too?
+### Debugging
+## current_name[0] = "code here"
+# p if_vowel_or_consonant ("e") # debug. return i.
+# p if_vowel_or_consonant ("a") # debug. return e.
+# p if_vowel_or_consonant ("u") # debug. return a. edge case.
+# p if_vowel_or_consonant ("z") # debug. return a. edge case.
+# p if_vowel_or_consonant ("y") # debug. return z.
+
+letter_by_letter(vowels,vowels)
 
 
+
+
+
+
+########################## INSTRUCTIONS: #########################
 ## delete::
 # If you get really and truly stuck, just write an alias method that loops through the original name and changes the letters somehow, without worrying about implementing this particular algorithm. 
 # It's really not worth stressing about. Simply attempting the algorithm will help you improve, even if you didn't quite get there.
