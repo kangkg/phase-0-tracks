@@ -39,7 +39,7 @@ def if_vowel_or_consonant (x)
    ######## END VOWEL CHECK
    #
   else   ########## method for consonants # check edge case for z.
-    if x == "z" then return x = "a" #edge case of "z"
+    if x == "z" then return x = "b" #edge case of "z"
     else #skip over vowels completely!
       # puts "","Original Letter: " + x
       x = x.next
@@ -79,9 +79,14 @@ end
 vowels = ["a","e","i","o","u"] # can change in future!
 
 puts "","What is your real name?"
-current_name = your_name_reversed("Felicia Torres") # hold reversed name. will become "Vussit Gimodoe != "vutsis gomodie"
+current_name = your_name_reversed(gets.chomp) # Hold Reversed name
 current_name = letter_by_letter(current_name)
-p current_name + " SHOULD BE Vussit Gimodoe"
+p "Your new spy name is: " + current_name 
+
+## PROPER DEBUG!
+# current_name = your_name_reversed("Felicia Torres") # hold reversed name. will become "Vussit Gimodoe != "vutsis gomodie"
+# current_name = letter_by_letter(current_name)
+# p current_name + " SHOULD BE Vussit Gimodoe"
 
 ### Debugging
 # puts "AFTER REVERSED:  #{current_name}",""
