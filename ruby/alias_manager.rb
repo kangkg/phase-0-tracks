@@ -20,25 +20,29 @@ end
 def if_vowel_or_consonant (x)
   vowel = ["a","e","i","o","u"] #can these "vowels" to something else if wanted.
   if vowel.include? x # to check if vowel or consonant
-    if x == "u" #edge case for "u"
-      x = "a"
-      return x
-    elsif
-    vowel.each_with_index do|letter, index| #check other letters, other than "u"
+    # ### EDGE CASES: ##### brute-force way, did a better way.
+    # if x == "u" #edge case for "u" - I could probably do some other way checking index -1 but not sure..
+    #   x = "a"
+    #   return x
+    # ### END EDGE CASES ###
+    vowel.each_with_index do|letter, index| # iterate through vowels
       if letter == x 
         x = vowel[index + 1]
-        return x
-      end #end this if-state
-    end # end this block
-    x
-  end #end entire vowel check
+        if x == nil # edge statement of last value being set to nil
+          x = vowel[0]
+          return x  # return edge statement value
+        end # end edge statement
+        return x # return x, if not edge statement
+      end #end the letter == x checking
+    end # end vowel.each block
+   #end entire vowel check
 
 
 
 
-   else
-    # method for consonants
-  end
+  else   ########## method for consonants
+    # etc
+  end # End entire if statement
 end
 
 
@@ -51,7 +55,7 @@ current_name = your_name_reversed(gets.chomp)
 #p current_name
 current_name[0] = "code here"
 p if_vowel_or_consonant ("e") # debug. return i.
-p if_vowel_or_consonant ("a") # debug. return i.
+p if_vowel_or_consonant ("a") # debug. return e.
 p if_vowel_or_consonant ("u") # debug. return a. edge case too?
 
 
