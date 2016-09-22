@@ -46,7 +46,7 @@ def if_vowel_or_consonant (x)
   end # End entire if statement
 end
 
-def letter_by_letter(x,y)
+def letter_by_letter(x)
   puts "hai"
 end
 
@@ -64,7 +64,7 @@ current_name = your_name_reversed(gets.chomp) # hold reversed name.
 # p if_vowel_or_consonant ("z") # debug. return a. edge case.
 # p if_vowel_or_consonant ("y") # debug. return z.
 
-letter_by_letter(vowels,vowels)
+letter_by_letter(curret_name)
 
 
 
