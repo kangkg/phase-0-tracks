@@ -35,11 +35,7 @@ def if_vowel_or_consonant (x)
         return x # return x, if not edge statement
       end #end the letter == x checking
     end # end vowel.each block
-   #end entire vowel check
-
-
-
-
+   ######## END VOWEL CHECK
   else   ########## method for consonants
     # etc
   end # End entire if statement
