@@ -22,7 +22,7 @@ def if_vowel_or_consonant (x)
       if letter == x 
         x = vowel[index + 1]
         if x == nil     # edge statement of last value being set to nil
-          x = vowel[0]
+          x = vowel[0]  # set to first value of VOWELS
           return x      # return edge statement value
         end             # end edge statement
         return x        # return x, if not edge statement
