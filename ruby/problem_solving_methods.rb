@@ -4,7 +4,7 @@
 #     1. return integer index, or NIL if not present
 #     2. dont use built-in.
 # end
-########################## RELEASE 1 #########################
+########################## RELEASE 0 #########################
 ########################## METHODS #########################
 
 def search_array(array, integer)
@@ -16,19 +16,21 @@ def search_array(array, integer)
   end
 end
 
-########################## DRIVER CODE release 1 #########################
-array = [1,2,3,4,5]
-puts search_array(array, 6)
+############# DRIVER CODE release 0 #############
 
-######### DEBUGGING EXAMPLE ##################
-arr = [42, 89, 23, 1]
-p "SEARCH ARRAY- should print 3: #{search_array(arr, 1)}"
+puts "========================================"
+arr = [42, 89, 23, 1, 7, 12, 899]
+puts "SEARCH ARRAY- should print 3: #{search_array(arr, 1)}"
 #=> 3
-p "SEARCH ARRAY- should print nil: #{search_array(arr, 24)}"
+puts "SEARCH ARRAY- should print nil: #{search_array(arr, 24)}"
 # => nil
 
+puts "SEARCH ARRAY- should print 6: #{search_array(arr, 899)}"
+puts ""
 
-######################### RELEASE 2 #########################
+
+######################### RELEASE 1 #########################
+######################### RELEASE 1 #########################
 
 def fibonacci(amount)
   fib_array = [0, 1]
@@ -46,19 +48,17 @@ def fibonacci(amount)
   return fib_array[-1] # return the last value we did!
 end
 
-########################## DRIVER release-2 #########################
+########## DRIVER release-1 ##################
+puts "Here is your Fibonacci at 100: #{fibonacci(100)} =? 218922995834555169026"
+puts ""
 
-puts "Here is your Fibonacci at 100: #{fibonacci(100)} Should be 218922995834555169026"
 
-
-########################## RELEASE 3 #########################
+########################## RELEASE 2 #########################
+########################## RELEASE 2 #########################
 
 # Bubble Sort Notes: It's a loop within a loop, with the inner loop testing a value against the next value, and swapping them accordingly, then moving to the next pair. The outer loop makes the inner loop run again, until there are no swaps to be made. So in an un-ideal situation, you would unnecessarily run through the loop an excessive amount of times. ("Bubbles to the top.")
 
-# MergeSort: Splits the array into smaller arrays, sorting them, then merging them together.
-
-
-# Pseudocode a sorting method that takes an array of integers and uses a sorting algorithm. The method should return a sorted version of the array. Your pseudocode should not be Ruby-specific.
+# MergeSort Notes: Splits the array into smaller arrays, sorting them, then merging them together.
 
 # Insertion Sort: 
 
@@ -82,17 +82,24 @@ def insertion_sort(array)
     # output
     final #returns final array
 end
+
+## DRIVER CODE RELEASE 2
 array = [1, 5, 3, 4, 6, 3] # Expected output (6 length): [1, 3, 3, 4, 5, 6]
 puts "Insertion Array: #{insertion_sort(array)}" #DEBUG
-
 # LINE BY LINE CODE: ^ = insertions
 # 1 =>  final[1]
 # 5 => satisfies elsif-statement(line75), on the first iteration, resulting in final[1,5^]
 # 3 =>  satisfies 72 (line75), on the second iteration, resulting in final[1, 3^, 5]
 # 4 =>  satisfies 72 (line75), after iterating 3 times. resulting in final[1, 3 , 4^, 5]
+# etc...
 
 
-############################# Can delete the following:
+puts "==END=="
+### END of code
+
+############################# Can delete the following: ###################################################################
+
+
 ############## Implement the sorting method in Ruby. ### I CANT DO THIS :( ############################################
 # def mergesort(array)
 #   # this will split them
@@ -134,3 +141,6 @@ puts "Insertion Array: #{insertion_sort(array)}" #DEBUG
 # p "MergeSort Result: #{mergesort([1,2,3,231,23,51,5,6,16,16,16,1617,7484])} "
 
 #######################################################################################################################
+
+
+
