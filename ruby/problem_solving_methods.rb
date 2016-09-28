@@ -40,8 +40,7 @@ def fibonacci(amount)
 
   index = 2 # Start indexing after the edge cases.
   until index == amount
-    current_value = fib_array[index - 1] + fib_array[index - 2]   # Equation for Fib-sequence. push it onto array afterwards.
-      #puts current_value # DEBUG
+    current_value = fib_array[-1] + fib_array[2]   # Equation for Fib-sequence. push it onto array afterwards.
     fib_array.push(current_value)
     index += 1 # counter approaching amount
   end 
