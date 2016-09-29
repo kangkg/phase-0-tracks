@@ -1,5 +1,9 @@
 class Santa 
 
+  #Refactor your code with attr_reader and attr_accessor. Verify that your driver code still works.
+  attr_reader :age, :ethnicity, :reindeer_ranking #for getters 
+  attr_accessor :gender #to allow setter
+
   def initialize(gender, ethnicity)
     puts "Initializing Santa instance ..."
     @gender = gender
@@ -26,18 +30,18 @@ class Santa
     @reindeer_ranking.push(reindeer_name)
   end
 
-  def gender=(new_gender) # The @gender attribute should have a setter method that allows @gender to be reassigned from outside the class definition.
-    @gender = new_gender  
-  end
+  # def gender=(new_gender) # The @gender attribute should have a setter method that allows @gender to be reassigned from outside the class definition.
+  #   @gender = new_gender  
+  # end
 
-  # Add two "getter" methods as well:
-  def age
-    @age
-  end
+  # # Add two "getter" methods as well:
+  # def age
+  #   @age
+  # end
 
-  def ethnicity
-    @ethnicity    
-  end
+  # def ethnicity
+  #   @ethnicity    
+  # end
   
 end #end class
 
@@ -52,7 +56,10 @@ end #end class
 santas2 = Santa.new("tester", "orange")
 p santas2.age
 p santas2.ethnicity
-p santas2
 
+#move rudolph to end
+p santas2.reindeer_ranking
+santas2.get_mad_at("Rudolph")
+p santas2.reindeer_ranking
 
 
