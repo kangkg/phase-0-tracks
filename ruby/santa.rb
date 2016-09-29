@@ -30,6 +30,12 @@ class Santa
     @gender = new_gender  
   end
 
+  # Add two "getter" methods as well:
+
+# The method age should simply return @age.
+# The method ethnicity should return @ethnicity.
+# Update your driver code to test your work.
+  
 end #end class
 
 ########################## Driver Code #########################
@@ -46,8 +52,3 @@ p santas2
 
 
 
-# Add two "getter" methods as well:
-
-# The method age should simply return @age.
-# The method ethnicity should return @ethnicity.
-# Update your driver code to test your work.
