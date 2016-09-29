@@ -22,7 +22,7 @@ class Santa
   end
 
   def get_mad_at(reindeer_name) # take a reindeer's name as an argument, and move that reindeer in last place in the reindeer rankings.
-    @reindeer_ranking.delete_at(@reindeer_ranking.index(reindeer_name))) # NOT CERTAIN IF THIS WORKS
+    @reindeer_ranking.delete_at(@reindeer_ranking.index(reindeer_name)) # NOT CERTAIN IF THIS WORKS
     @reindeer_ranking.push(reindeer_name)
   end
 
@@ -31,10 +31,13 @@ class Santa
   end
 
   # Add two "getter" methods as well:
+  def age
+    @age
+  end
 
-# The method age should simply return @age.
-# The method ethnicity should return @ethnicity.
-# Update your driver code to test your work.
+  def ethnicity
+    @ethnicity    
+  end
   
 end #end class
 
@@ -46,8 +49,9 @@ end #end class
 #   santas << Santa.new(example_genders[i], example_ethnicities[i])
 # end
 
-santas2 = Santa.new("tester", "oranger")
-
+santas2 = Santa.new("tester", "orange")
+p santas2.age
+p santas2.ethnicity
 p santas2
 
 
