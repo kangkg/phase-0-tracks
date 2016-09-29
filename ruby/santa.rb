@@ -1,8 +1,8 @@
 class Santa 
 
   #Refactor your code with attr_reader and attr_accessor. Verify that your driver code still works.
-  attr_reader :age, :ethnicity, :reindeer_ranking #for getters 
-  attr_accessor :gender #to allow setter
+  attr_reader :ethnicity, :reindeer_ranking #for getters 
+  attr_accessor :gender, :age #to allow setter
 
   def initialize(gender, ethnicity)
     puts "Initializing Santa instance ..."
@@ -46,13 +46,15 @@ class Santa
 end #end class
 
 ########################## Driver Code #########################
-# santas = []
-# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-# example_genders.length.times do |i|
-#   santas << Santa.new(example_genders[i], example_ethnicities[i])
-# end
+#### Provided Code:
+santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
+
+
+
+#### My debugging:
 santas2 = Santa.new("tester", "orange")
 p santas2.age
 p santas2.ethnicity
@@ -62,4 +64,18 @@ p santas2.reindeer_ranking
 santas2.get_mad_at("Rudolph")
 p santas2.reindeer_ranking
 
+##### Last release
+puts "======================== RELEASE 4 ===================================="
+puts "============================================================"
+santas3 = []
+50.times do |i| #CAN CHANGE AMOUNT OF SANTAS HERE
+  santas3 << Santa.new(example_genders.sample, example_ethnicities.sample) # .sample => random choice from array
+end
 
+santas3.map! do |santa|
+  santa.age = rand(140)
+  puts "Age: #{santa.age} | Ethnicity: #{santa.ethnicity} | Gender: #{santa.gender}"
+  santa #return santa
+end
+
+## END
