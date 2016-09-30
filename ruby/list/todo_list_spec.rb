@@ -1,3 +1,27 @@
+class TodoList
+  #include  #optional Module-Includes
+
+  def initialize (list) #add class-arguments here
+    @list = list
+  end
+
+  def get_items
+    @list
+  end
+
+  def add_item(new_item)
+    @list << new_item
+  end
+
+  def delete_item(delete_this_item)
+    @list.delete(delete_this_item)
+  end
+
+  def get_item(index)
+    @list[index]
+  end
+end #=> end class
+
 describe TodoList do
   let(:list) { TodoList.new(["do the dishes", "mow the lawn"]) }
 
