@@ -16,6 +16,7 @@ class WordGuessingGame
       puts "You have already entered that word before."
       return nil # to skip to next iteration
     end
+
     @number_of_guesses += 1
     if user_answer == @correct_answer || @correct_answer == @updated_guess.gsub(" ", "") #check if correct answer, or correct guesses in the end
       successMessage 
@@ -24,7 +25,7 @@ class WordGuessingGame
       p @updated_guess.gsub(" ", "").strip ############# DEBUGGING
       defeatMessage
       return @done = 'done'
-    else
+    elsif
       ## code that updates info of updated_guess. need to be careful because .index only gets the first instance of a letter. Doesn't work if lengths mismatch. doesn't work if there's more than one letter instance in the correct word.
       # user_answer.each_char do |user_letter| 
       #   correct_answer.each_char do |correct_letter|
@@ -46,15 +47,6 @@ class WordGuessingGame
       # end
 
       # only give hint if a letter
-      if (user_answer.length == 1) && (correct_answer.include? user_answer)
-       @updated_guess[correct_answer.index(user_answer) * 2] =  user_answer 
-        if @correct_answer == @updated_guess.gsub(" ", "")
-          successMessage 
-          return @done = 'done' 
-        end #check if correct answer, or correct guesses 
-
-        # array_of_all_instances = (0 ... correct_answer.length).find_all { |i| correct_answer[i,1] == user_answer } # for multiple same letters
-      end
 
        puts "Your current guesses include these letters: #{@updated_guess}"
        @past_guesses << user_answer
