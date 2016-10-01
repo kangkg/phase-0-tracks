@@ -12,8 +12,9 @@ describe WordGuessingGame do
   end
 
   it "takes a user's letter and adds a hint if applicable." do
-    expect(get_user_guess('u')).to eq "u _ _ _ _ _ _ " 
+    expect(get_user_guess('u')).to eq 'done'
   end
 end
 
 # Surely I could fix this rspec to take gets.chomp. In addition, I could make the rspec test random alphabetical letters.
+# This RSPEC works if I comment out my driver code in my game.rb file... How do I fix this??
