@@ -1,0 +1,49 @@
+## In the solo_project directory, create a file called queries.txt. For each SQL query you run, paste both the command and the output (if any) into queries.txt.
+## Run a SQL query for each of the following:
+
+## Display the information in one table (either table is fine).
+SELECT * FROM workers;
+
+1|Jon Mon|11|1
+2|Daisy Hazy|551|2
+3|Bon Don|232|3
+
+
+## Update an item that meets some condition (you can choose a condition that makes sense).
+SELECT * FROM workers, managers WHERE workers.boss_id = managers.id;
+
+1|Jon Mon the Second|11|1
+2|Daisy Hazy|551|2
+3|Bon Don|232|3
+
+
+## Display the information in both tables using one query.
+SELECT * FROM workers, managers WHERE workers.boss_id = managers.id;
+
+1|Jon Mon the Second|11|1|1|Overlord Of All Humans|Evil United|true
+2|Daisy Hazy|551|2|2|Trogdor the Burninator|Dance Party Ltd.|false
+3|Bon Don|232|3|3|Normal John|Banana Republika|false
+
+
+## Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+SELECT workers.name, managers.name FROM workers JOIN managers ON workers.boss_id = managers.id;
+
+Jon Mon the Second|Overlord Of All Humans
+Daisy Hazy|Trogdor the Burninator
+Bon Don|Normal John
+
+## Delete an item that meets some condition (you can choose a condition that makes sense).
+DELETE FROM workers WHERE name="Bon Don";
+
+1|Jon Mon the Second|11|1
+2|Daisy Hazy|551|2
+
+
+## There are lots of different kinds of joins. What are they? Can you apply different conditions to a join to change what's displayed? Can you bookmark any good diagrams that will help you tell different joins apart in the future?
+Try a few different joins in your database, and record the commands and the output in queries.txt.
+
+There are left outer, right outer, natural, center, and others. (http://stackoverflow.com/questions/17946221/sql-join-and-different-types-of-joins). Some will show all rows, even if they don't have a matching join-id. 
+
+select workers.id, workers.name, managers.name FROM workers
+INNER JOIN managers 
+ON workers.boss_id = managers.id;
