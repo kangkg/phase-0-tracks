@@ -47,3 +47,34 @@ There are left outer, right outer, natural, center, and others. (http://stackove
 select workers.id, workers.name, managers.name FROM workers
 INNER JOIN managers 
 ON workers.boss_id = managers.id;
+
+
+//////////////////////////////////////////////// 8.4 ////////////////////////////
+
+INSERT INTO businesses (name) VALUES ("Lotus Yoga");
+INSERT INTO businesses (name) VALUES ("Sushi World");
+INSERT INTO businesses (name) VALUES ("Plumbing by Janet");
+
+INSERT INTO users (first_name, last_name) VALUES ("Bradford", "Pitt");
+INSERT INTO users (first_name, last_name) VALUES ("Mandy", "Kaling");
+INSERT INTO users (first_name, last_name) VALUES ("Angela", "Jolie");
+
+//
+
+CREATE TABLE reviews (
+  id INTEGER PRIMARY KEY,
+  stars INT,
+  comment VARCHAR(255),
+  business_id INT,
+  user_id INT, 
+  FOREIGN KEY (business_id) REFERENCES businesses(id),
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+// Populate your reviews table with a few pieces of data. You'll need to provide valid integers for both of the foreign keys (one valid id of a user, and one valid id of a business). An example review might consist of 5 stars, the text "great food!", a business ID of 1, and a user ID of 1 (provided you have a business with a primary key of 1 and a user with a primary key of 1).
+
+INSERT INTO reviews (stars, comment, business_id, user_id) VALUES (4, "Awesome!!", 1, 2);
+INSERT INTO reviews (stars, comment, business_id, user_id) VALUES (1, "Nope!!", 2, 3);
+INSERT INTO reviews (stars, comment, business_id, user_id) VALUES (5, "THE BEST!!", 1, 1);
+INSERT INTO reviews (stars, comment, business_id, user_id) VALUES (null, null, null, 3);
+
