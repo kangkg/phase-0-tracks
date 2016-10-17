@@ -29,7 +29,7 @@ db.execute(create_table_cmd)
 # so. many. kittens. 
 #KittenExplosion
 def create_kitten(db, name, age)
-  db.execute("INSERT INTO kittens (name, age) VALUES (?, ?)", [name, age])
+  db.execute("INSERT INTO kittens (name, age) VALUES (?, ?)", [name, age]) #2nd argument will replace the '?' code.
 end
 
 10000.times do
