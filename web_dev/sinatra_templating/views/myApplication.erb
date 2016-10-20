@@ -1,0 +1,16 @@
+<html>
+<head>
+  <title>People and their Favorite Colors</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>PEOPLE AND COORS</h1>
+  <p>Welcome.</p>
+  <p>Click <a href="people/new">here</a> to create a entry.</p>
+  <ul>
+    <% @favorite_colors.each do |person| %>
+      <li><%= person['name'] %>, <%= person['color'] %></li> 
+    <% end %>
+  </ul>
+</body>
+</html>

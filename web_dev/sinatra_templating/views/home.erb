@@ -9,8 +9,10 @@
   <p>Click <a href="students/new">here</a> to create a new student.</p>
   <ul>
     <% @students.each do |student| %>
-      <li><%= student['name'] %>, <%= student['age'] %></li>
+      <li><%= student['name'] %>, <%= student['age'] %>, <%= student['campus'] %></li> <!-- the 'ice-cream-cones' are for ruby for both erb and HTML file (without it, it will just print. the equal sign on ice cream cone prints return)-->
     <% end %>
   </ul>
 </body>
 </html>
+
+<!-- erb = embedded ruby (extension for ruby expressions IN the evaluations) (treat erb like html) -->
